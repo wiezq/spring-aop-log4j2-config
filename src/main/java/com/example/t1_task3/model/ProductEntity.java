@@ -24,4 +24,13 @@ public class ProductEntity {
     private double price;
     @ManyToMany(mappedBy = "products")
     private List<OrderEntity> orders = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "ProductEntity{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

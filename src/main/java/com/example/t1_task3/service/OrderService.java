@@ -1,5 +1,6 @@
 package com.example.t1_task3.service;
 
+import com.example.t1_task3.aspect.Loggable;
 import com.example.t1_task3.model.OrderEntity;
 import com.example.t1_task3.model.OrderStatus;
 import com.example.t1_task3.model.ProductEntity;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
+@Loggable
 public class OrderService {
     private final OrderEntityRepository orderEntityRepository;
     private final ProductService productService;

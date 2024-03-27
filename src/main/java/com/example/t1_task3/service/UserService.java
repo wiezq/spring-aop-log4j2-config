@@ -1,16 +1,15 @@
 package com.example.t1_task3.service;
 
+import com.example.t1_task3.aspect.Loggable;
 import com.example.t1_task3.model.UserEntity;
 import com.example.t1_task3.repository.UserEntityRepository;
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-@Slf4j
+@Loggable
 public class UserService {
     private final UserEntityRepository userRepository;
 
@@ -37,6 +36,7 @@ public class UserService {
         user.setEmail(email);
         return userRepository.save(user);
     }
+
 
     public void deleteUser(Long id) {
         UserEntity user = getUserById(id);

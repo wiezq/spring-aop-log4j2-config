@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
-public class LoggingAscpectTest {
+public class LoggingAspectTest {
     @Autowired
     private UserService userService;
     @Autowired

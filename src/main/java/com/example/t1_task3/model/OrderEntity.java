@@ -1,6 +1,13 @@
 package com.example.t1_task3.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -28,4 +35,12 @@ public class OrderEntity {
             inverseJoinColumns = @JoinColumn(name = "product_id"))
     private List<ProductEntity> products = new ArrayList<>();
 
+    @Override
+    public String toString() {
+        return "OrderEntity{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                ", status=" + status +
+                '}';
+    }
 }

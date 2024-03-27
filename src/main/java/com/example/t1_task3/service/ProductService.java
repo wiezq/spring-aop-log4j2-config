@@ -1,16 +1,15 @@
 package com.example.t1_task3.service;
 
+import com.example.t1_task3.aspect.Loggable;
 import com.example.t1_task3.model.ProductEntity;
 import com.example.t1_task3.repository.ProductEntityRepository;
-import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-@Slf4j
+@Loggable
 public class ProductService {
     private final ProductEntityRepository productRepository;
 

@@ -84,3 +84,12 @@ Linux / MacOS
 ./gradlew test
 ```
 После выполнения тестов в папке проекта появится папка `logs` с файлами логов.
+
+Пример лога аспекта:
+```
+2024-03-27 13:41:25.385 [Test worker] INFO  com.example.t1_task3.aspect.LoggingAspect - Calling method: createUser with parameters: (name=John, email=john@example.com)
+2024-03-27 13:41:25.418 [Test worker] INFO  com.example.t1_task3.aspect.LoggingAspect - Method createUser returned: UserEntity{id=1, name='John', email='john@example.com'}
+2024-03-27 13:41:25.418 [Test worker] INFO  com.example.t1_task3.aspect.LoggingAspect - Calling method: createProduct with parameters: (name=Product 1, price=100.0)
+2024-03-27 13:41:25.420 [Test worker] INFO  com.example.t1_task3.aspect.LoggingAspect - Method createProduct returned: ProductEntity{id=1, name='Product 1', price=100.0}
+2024-03-27 13:41:25.421 [Test worker] INFO  com.example.t1_task3.aspect.LoggingAspect - Calling method: createProduct with parameters: (name=Product 2, price=200.0)
+```
